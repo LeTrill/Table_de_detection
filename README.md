@@ -52,7 +52,7 @@ Ce projet automatise la **détection de tableaux** dans des images de documents.
 ### Étape 1 : Cloner le projet
 
 ```bash
-git clone <votre-repo>
+git clone <https://github.com/LeTrill/Table_de_detection.git>
 cd Table-detection2
 ```
 
@@ -95,7 +95,6 @@ python -c "import torch; print(f'PyTorch: {torch.__version__}'); print(f'GPU dis
 ```
 Table-detection2/
 ├── app/
-│   ├── __init__.py           # Package initialization
 │   ├── detection.py          # Classe TableDetector (cœur du projet)
 │  
 ├── tests/
