@@ -1,8 +1,8 @@
-# 🔍 Table Detection - Automatic Table Detection System
+# Table Detection - Automatic Table Detection System
 
 An automatic table detection project in documents (invoices, receipts, PDFs) using the **DETR** (Detection Transformer) model from Hugging Face.
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Description](#description)
 - [Features](#features)
@@ -17,7 +17,7 @@ An automatic table detection project in documents (invoices, receipts, PDFs) usi
 
 ---
 
-## 📝 Description
+##  Description
 
 This project automates **table detection** in document images. It uses the pre-trained model `TahaDouaji/detr-doc-table-detection` from Hugging Face, based on the DETR (Detection Transformer) architecture.
 
@@ -29,7 +29,7 @@ This project automates **table detection** in document images. It uses the pre-t
 
 ---
 
-## ✨ Features
+## Features
 
 ✅ **Table Detection** - Identifies all tables present in an image  
 ✅ **Physical Extraction** - Crops and saves tables as separate files  
@@ -41,7 +41,7 @@ This project automates **table detection** in document images. It uses the pre-t
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Requirements
 
@@ -91,17 +91,15 @@ python -c "import torch; print(f'PyTorch: {torch.__version__}'); print(f'GPU ava
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Table-detection2/
 ├── app/
-│   ├── __init__.py           # Package initialization
 │   ├── detection.py          # TableDetector class (project core)
-│   └── detection.ipynb       # Development notebook
+│  
 ├── tests/
 │   ├── test_detector.py      # Unit test suite
-│   └── test_detector.ipynb   # Test notebook
 ├── data/
 │   ├── inputs/               # Input images
 │   └── outputs/              # Extracted tables
@@ -113,7 +111,7 @@ Table-detection2/
 
 ---
 
-## 💻 Usage
+## Usage
 
 ### Method 1: Main Script (Recommended)
 
@@ -160,7 +158,7 @@ results = detector.predict("my_image.jpg")
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Detector Parameters
 
@@ -191,7 +189,7 @@ set CUDA_VISIBLE_DEVICES=0     # Windows
 
 ---
 
-## 🧪 Tests
+## Tests
 
 ### Run All Tests
 
@@ -222,7 +220,7 @@ pytest tests/test_detector.py::test_prediction_on_valid_image -v
 
 ---
 
-## 📊 Examples
+## Examples
 
 ### Example 1: Simple Detection
 
@@ -233,9 +231,9 @@ detector = TableDetector(threshold=0.5)
 results = detector.predict("invoice.jpg")
 
 if results:
-    print(f"✅ {len(results)} table(s) found")
+    print(f" {len(results)} table(s) found")
 else:
-    print("⚠️ No tables detected")
+    print(" No tables detected")
 ```
 
 ### Example 2: Extraction with Detailed Output
@@ -276,7 +274,7 @@ for file in os.listdir(folder):
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 ### Main Dependencies
 
@@ -299,7 +297,7 @@ pytest-cov ≥4.0.0
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Problem 1: ModuleNotFoundError: No module named 'torch'
 
@@ -357,7 +355,7 @@ print(f"Using: {detector.device}")  # Check GPU/CPU
 
 ---
 
-## 📈 Performance
+##  Performance
 
 ### Benchmarks (Intel i7 CPU)
 
@@ -371,25 +369,8 @@ print(f"Using: {detector.device}")  # Check GPU/CPU
 
 ---
 
-## 🤝 Contributing
 
-Contributions are welcome! Here's how:
-
-1. Fork the project
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
-## 🔗 Resources
+## Resources
 
 - [DETR Paper](https://arxiv.org/abs/2005.12677)
 - [Hugging Face Transformers](https://huggingface.co/docs/transformers)
@@ -398,7 +379,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ---
 
-## 📞 Support
+##  Support
 
 For questions or issues:
 1. Check the [Troubleshooting](#troubleshooting) section
@@ -409,29 +390,5 @@ For questions or issues:
 
 **Last Update:** April 15, 2026  
 **Version:** 1.0.0  
-**Status:** ✅ Production Ready
 
----
-
-## 🔗 Resources
-
-- [DETR Paper](https://arxiv.org/abs/2005.12677)
-- [Hugging Face Transformers](https://huggingface.co/docs/transformers)
-- [Model Used](https://huggingface.co/TahaDouaji/detr-doc-table-detection)
-- [PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
-
----
-
-## 📞 Support
-
-For questions or issues:
-1. Check the [Troubleshooting](#troubleshooting) section
-2. Open an issue on GitHub
-3. Consult Hugging Face documentation
-
----
-
-**Last Update:** April 15, 2026  
-**Version:** 1.0.0  
-**Status:** ✅ Production Ready  
 
